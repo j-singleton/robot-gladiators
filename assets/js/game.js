@@ -1,20 +1,15 @@
 var playerName = window.prompt("What is your robot's name?");
-var playerHealth = 100;
+var playerHealth = 1000;
 var playerAttack = 10;
 var playerMoney = 10;
 
-var enemyName = "Roborto";
+var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
 var enemyAttack = 12;
 
-/*
-var fight = function () {
-   window.alert("Welcome to Robot Gladiators!");
-};
-*/
+window.alert("Welcome to Robot Gladiators!");
 
-var fight = function() {
-    window.alert("Welcome to Robot Gladiators!");
+var fight = function(enemyName) {
 
 
     // Option to skip the fight
@@ -68,27 +63,27 @@ var fight = function() {
     }
 };
 
-fight ();
-
-
-
+//console.log(enemyName[3]);
+//console.log(enemyName[enemyName.length-1]);
+//console.log(enemyName);
 /*
-// this creates a function named "fight"
-var playerName = window.prompt("What is your robot's name?");
-
-
-function fight() {
-    window.alert("The fight has begun!");
+for(var i = 0; i < 3; i++) {
+    console.log("apple",i);
+}
+for(var i = 0; i < 3; i++) {
+    console.log(enemyName[i], i);
 }
 
-//fight();
+for(var i =0; i < enemyName.length; i++) {
+    console.log(enemyName[i]);
+    console.log(i);
+    console.log(enemyName[i] + " is at " + i + " index");
+}
+*/
 
-//window.alert(playerName);
+//fight ();
 
-console.log(playerName);
-console.log(10+5);
-console.log("Your robot's name is " + playerName);
-var name = "your name";
-console.log(name);
+for(var i = 0; i < enemyNames.length; i++) {
+    fight(enemyNames[i]);
+}
 
- */
