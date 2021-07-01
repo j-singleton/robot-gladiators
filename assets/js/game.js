@@ -1,6 +1,6 @@
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 1000;
-var playerAttack = 50;
+var playerAttack = 30;
 var playerMoney = 10;
 
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
@@ -15,7 +15,7 @@ var fight = function(enemyName) {
         enemyHealth = 50;
     }
 
-    while (enemyHealth > 0) {
+    while (playerHealth > 0 && enemyHealth > 0) {
 
         // Option to skip the fight
         var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? Enter 'FIGHT' or 'SKIP' to choose.");
@@ -33,6 +33,7 @@ var fight = function(enemyName) {
             // check enemy's health
             if (enemyHealth <= 0) {
                 window.alert(enemyName + " has died!");
+                break;
             } else {
                 window.alert(enemyName + " still has " + enemyHealth + " health left.");
             }
@@ -49,17 +50,7 @@ var fight = function(enemyName) {
             } else {
                 window.alert(playerName + " still has " + playerHealth + " health left.");
             }
-            // if player choses to skip
-        } else if (promptFight === "skip" || promptFight === "SKIP") {
-            // Confirm player wants to skip
-            var confirmSkip = window.confirm("Are you sure you'd like to quit?")
 
-            // If yes (true), penalize and leave fight
-            if (confirmSkip) {
-                playerMoney = playerMoney - 2;
-            } else {
-                fight();
-            }
 
             window.alert(playerName + " has chosen to skip the fight!");
         } else {
